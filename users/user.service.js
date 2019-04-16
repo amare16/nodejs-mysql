@@ -9,9 +9,9 @@ module.exports = {
 
 async function authenticate({ username, password }) {
   var sql =
-    "SELECT username, hash, firstname, lastname, createdDate FROM `user` WHERE `username`='" +
+    "SELECT username, password, firstname, lastname, created_at FROM `user` WHERE `username`='" +
     username +
-    "' and hash = '" +
+    "' and password = '" +
     password +
     "'";
 
